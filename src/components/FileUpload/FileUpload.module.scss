@@ -1,0 +1,203 @@
+@import "../../styles/index";
+
+.input-file {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.input-file-box {
+  width: 21.875rem;
+  min-height: 6rem;
+  margin: $spacing-lg 0;
+  border: dashed 0.0625rem $neutral-20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-file-message {
+  text-decoration: underline;
+  color: $text-success;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.drag-over {
+  border: solid 0.125rem $secondary-80;
+}
+
+.upload-box {
+  width: 21.875rem;
+  min-height: 6rem;
+  margin: $spacing-lg 0;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: $neutral-70;
+}
+
+.upload-box-partial-done,
+.upload-box-uploading {
+  border-color: $neutral-70;
+}
+
+.upload-box-error {
+  border-color: $semantic-error;
+}
+
+.upload-box-done {
+  border-color: $semantic-success;
+}
+
+.helper-text {
+  color: $neutral-70;
+  margin-top: $spacing-md;
+  letter-spacing: -1%;
+  line-height: 150%;
+  font-weight: $font-weight-light;
+  font-size: $font-sm;
+}
+
+.label {
+  font-weight: $font-weight-medium;
+  margin-right: $spacing-md;
+}
+
+.upload-message {
+  margin: $spacing-md 0 $spacing-3xl;
+  text-align: center;
+  font-weight: $font-weight-light;
+  font-size: $font-md;
+}
+
+.upload-items-list {
+  padding: 0 $spacing-3xl $spacing-xl;
+}
+
+.file-item {
+  display: flex;
+  margin: $spacing-xl 0;
+  align-items: center;
+
+  &-progress {
+    & .icon-upload-done {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: $semantic-success;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-name {
+    flex: 1;
+    margin-left: $spacing-md;
+
+    & p {
+      width: 14rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $text-default-100;
+      font-size: $font-md;
+      font-weight: $font-weight-regular;
+    }
+
+    &-error {
+      & p {
+        color: $text-error;
+      }
+    }
+  }
+
+  &-remove-button {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.error {
+  &-section {
+    display: flex;
+    margin-bottom: $spacing-md;
+    align-items: center;
+    color: $text-error;
+  }
+
+  &-message {
+    margin-left: $spacing-sm;
+    line-height: 150%;
+    font-weight: $font-weight-light;
+    font-size: $font-md;
+    letter-spacing: -2%;
+  }
+
+  &-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: $text-error;
+  }
+
+  & .label {
+    color: $text-error;
+  }
+
+  & .uploaded-status-message {
+    & span {
+      color: $text-error;
+    }
+  }
+
+  & .select-field {
+    border-color: $semantic-error;
+
+    &:hover {
+      border-color: $semantic-error;
+    }
+  }
+}
+
+.uploaded-done-message {
+  color: $text-success;
+}
+
+.uploaded-message {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: $spacing-lg 0 $spacing-3xl;
+
+  & .uploaded-status-message {
+    & span {
+      font-weight: $font-weight-light;
+      font-size: $font-md;
+    }
+  }
+
+  & .upload-more-button {
+    input {
+      font-weight: $font-weight-medium;
+      color: $text-default-100;
+      font-size: $font-md;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.file-item-divider {
+  width: auto;
+  background-color: $color-gray-2;
+  border-bottom: 0.125rem solid $neutral-00;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  height: 0.13rem;
+}
